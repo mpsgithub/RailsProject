@@ -5,21 +5,24 @@ class UsersController < ApplicationController
 		
 	def new
 	end	
+
+	def demo
+	end
 	
 	def create		
 		user = User.new(user_params)
 			if user.save
 				# save user in session, ie, login user
 				session[:user_id] = user.id
-				redirect_to "/users/#{user.id}"
+				redirect_to "/users/demo"
 			else
 				flash[:errors]=user.errors.full_messages
-				redirect_to "/users/new"
+				redirect_to "/users/demo"
 			end
 	end
 
 	def show
-		@user=User.find(params[:id])
+		# @user=User.find(params[:id])
 	end	
 
 	def edit

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 	    if user && user.authenticate(params[:password])
 	      session[:user_id] = user.id
 	      # redirect_to "/users/#{user.id}"
-	      redirect_to "/sessions/index"
+	      redirect_to "/users/show"
 	    else
 	      flash[:errors] = ["Invalid email/password combination"]
 	      redirect_to "/users/new"

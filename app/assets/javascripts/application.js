@@ -11,7 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require bootstrap.min
+//= require jquery.snap-puzzle
+//= require jquery.snap-puzzle.min
