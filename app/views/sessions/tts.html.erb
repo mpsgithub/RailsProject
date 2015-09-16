@@ -1,29 +1,19 @@
 <html>
-<head>
-  <title>Text to speech</title>
-  <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-</head>
+	<head>
+		<title>trial</title>
+		
+		<script type="text/javascript"> 
+			$(document).ready(function(){
+		        $('#clickme').click(function(){
+				//alert('speaking');
+				responsiveVoice.speak($('#mytext').val(), "US English Female");
+				});	
+			});
+		</script>	
+	</head>
 <body>
-<div >
-  <textarea id="text"> Hello world! </textarea>
-  <%
-# These code snippets use an open-source library. http://unirest.io/ruby
-response = Unirest.post "https://voicerss-text-to-speech.p.mashape.com/?key= 8a55a0f46832411e9a1b5d1acb2c00f4",
-  headers:{
-    "X-Mashape-Key" => " 8a55a0f46832411e9a1b5d1acb2c00f4",
-    "Content-Type" => "application/x-www-form-urlencoded"
-  },
-  parameters:{
-    "c" => "mp3",
-    "f" => "8khz_8bit_mono",
-    "hl" => "en-us",
-    "r" => 0,
-    "src" => "Hello, world!"
-  }
-
-
-  %>
-</div>
+<input type="text" id="mytext" value="Earth is the third planet from the Sun, the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, and the only astronomical object known to accommodate life.">
+<button id="clickme" name="clickme"> Play </button>
 </body>
 </html>
+

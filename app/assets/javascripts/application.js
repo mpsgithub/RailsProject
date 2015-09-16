@@ -19,3 +19,5 @@
 //= require jquery.snap-puzzle
 //= require jquery.snap-puzzle.min
 //= require jquery.dad
+//= require responsive_voice
+
