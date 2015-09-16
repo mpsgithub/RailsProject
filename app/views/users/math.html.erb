@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Math - Add one</title>
+	<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function()
+		{
+		var num = Math.floor(Math.random() * (100 - 0) + 0);
+		var ans  = num + 1
+		$('#add').html(num + " + 1");
+		$('#submit').click(function(){
+			var user_input = $('#ans').val()
+			// console.log(user_input);	
+			if(ans == user_input){
+				alert('u r right');
+			}
+			else{
+				alert('wrong');
+			}
+		})
+		})
+	</script>
+</head>
+<body>
+	<div id="add"></div>
+	<div>
+		<input type="text" id="ans">
+		<input type="submit" value="check" id="submit">
+	</div>
+</body>
+</html>

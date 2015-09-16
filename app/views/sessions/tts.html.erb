@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Text to speech</title>
+  <script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div >
+  <textarea id="text"> Hello world! </textarea>
+  <%
+# These code snippets use an open-source library. http://unirest.io/ruby
+response = Unirest.post "https://voicerss-text-to-speech.p.mashape.com/?key= 8a55a0f46832411e9a1b5d1acb2c00f4",
+  headers:{
+    "X-Mashape-Key" => " 8a55a0f46832411e9a1b5d1acb2c00f4",
+    "Content-Type" => "application/x-www-form-urlencoded"
+  },
+  parameters:{
+    "c" => "mp3",
+    "f" => "8khz_8bit_mono",
+    "hl" => "en-us",
+    "r" => 0,
+    "src" => "Hello, world!"
+  }
+
+
+  %>
+</div>
+</body>
+</html>

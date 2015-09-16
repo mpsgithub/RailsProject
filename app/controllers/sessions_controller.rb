@@ -1,5 +1,11 @@
+require 'json'
+require 'net/http' 
+require 'open-uri'
+
 class SessionsController < ApplicationController
+
 	def index
+		render "/sessions/tts"
 	end
 
 	def new  
