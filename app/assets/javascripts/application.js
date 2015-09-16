@@ -18,3 +18,4 @@
 //= require bootstrap.min
 //= require jquery.snap-puzzle
 //= require jquery.snap-puzzle.min
+//= require responsive_voice

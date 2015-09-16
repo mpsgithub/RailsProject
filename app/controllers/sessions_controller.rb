@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 	def index
+		render "tts"
 	end
 
 	def new  
@@ -10,10 +11,10 @@ class SessionsController < ApplicationController
 	    if user && user.authenticate(params[:password])
 	      session[:user_id] = user.id
 	      # redirect_to "/users/#{user.id}"
-	      redirect_to "/users/show"
+	      redirect_to "/subjects/index"
 	    else
 	      flash[:errors] = ["Invalid email/password combination"]
-	      redirect_to "/users/new"
+	      redirect_to "/sessions/new"
 	    end
 	end  
 
@@ -21,6 +22,6 @@ class SessionsController < ApplicationController
 
 	def destroy
 	  	reset_session
-	  	redirect_to "/users/new"
+	  	redirect_to "/sessions/new"
 	end	
 end

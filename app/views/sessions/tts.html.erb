@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>trial</title>
+		
+		<script type="text/javascript"> 
+			$(document).ready(function(){
+		        $('#clickme').click(function(){
+				//alert('speaking');
+				responsiveVoice.speak($('#mytext').val(), "US English Female");
+				});	
+			});
+		</script>	
+	</head>
+<body>
+<input type="text" id="mytext" value="Earth is the third planet from the Sun, the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, and the only astronomical object known to accommodate life.">
+<button id="clickme" name="clickme"> Play </button>
+</body>
+</html>

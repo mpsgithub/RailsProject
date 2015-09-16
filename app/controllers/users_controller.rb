@@ -14,10 +14,10 @@ class UsersController < ApplicationController
 			if user.save
 				# save user in session, ie, login user
 				session[:user_id] = user.id
-				redirect_to "/users/demo"
+				redirect_to "/subjects/index"
 			else
 				flash[:errors]=user.errors.full_messages
-				redirect_to "/users/demo"
+				redirect_to "/sessions/new"
 			end
 	end
 
