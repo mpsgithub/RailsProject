@@ -1,10 +1,17 @@
 <h2>Categories</h2>
 <% @categories.each do |category| %>
-	
+	<script>
+	$(document).ready(function(){
+		        $('#clickme<%= category.id %>').click(function(){
+				alert('speaking'+ $('#my_text<%= category.id %>').val());
+				responsiveVoice.speak($('#my_text<%= category.id %>').val(), "US English Female");
+				});	
+			});
+	</script>
 	<h4><a href="/categories/<%= category.id %>"><%= category.name %></a></h4>
 	<div id="category_pic"> <%= image_tag(category.image_link) %> 
-		<p><textarea col = 4 rows = 4 id ="my_text" disabled><%= category.description %></textarea></p>
-		<button id="clickme" name="clickme"> Read out to me </button>
+		<p><textarea col = 4 rows = 4 class = "my_text" id="my_text<%= category.id %>" disabled><%= category.description %></textarea></p>
+		<button id="clickme<%= category.id %>" name="clickme"> Read out to me </button>
 	</div>
 
 <% end %>

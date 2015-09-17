@@ -1,7 +1,17 @@
 <h1>Topic</h1>
 <h2><%= @topic.name %></h2>
 
-
-<%= video_tag @topic.video_link, :controls => true %>
-
+	<script>
+		$(document).ready(function(){
+		        $('#clickme<%= @topic.id %>').click(function(){
+				alert('speaking'+ $('#my_text<%= @topic.id %>').val());
+				responsiveVoice.speak($('#my_text<%= @topic.id %>').val(), "US English Female");
+				});	
+			});
+	</script>
+	
+		<%= @topic.name %>
+		<p><textarea col = 4 rows = 4 id="my_text<%= @topic.id %>" disabled><%= @topic.description %></textarea></p>
+		<button id="clickme<%= @topic.id %>" name="clickme"> Read out to me </button>
+		<%= video_tag @topic.video_link, :controls => true %>
 
