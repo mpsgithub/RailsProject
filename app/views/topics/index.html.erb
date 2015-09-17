@@ -9,9 +9,14 @@
 				});	
 			});
 	</script>
-	
-		<%= @topic.name %>
-		<p><textarea col = 4 rows = 4 id="my_text<%= @topic.id %>" disabled><%= @topic.description %></textarea></p>
-		<button id="clickme<%= @topic.id %>" name="clickme"> Read out to me </button>
-		<%= video_tag @topic.video_link, :controls => true %>
+	<div id="topic-container">
+		<div id="left">
+			<p><textarea cols = 30 rows = 10 class="my_text" id="my_text<%= @topic.id  %>" disabled><%= @topic.description %></textarea></p>
+			<button id="clickme<%= @topic.id %>" name="clickme"> Read out to me </button>
+		</div>
+		<div id="right">
+			<%= video_tag @topic.video_link, :controls => true %>
+		</div>
 
+	</div>
+	<a href="/topics/<%= @topic.id %>">practise adding </a>
