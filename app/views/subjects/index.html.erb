@@ -6,6 +6,9 @@
 </head>
 <body>
 	<h1>Subjects</h1>
+	<% @subjects.each do |subject| %>
+	<h2><a href="/subjects/<%= subject.id%>"><%= subject.name%></a> </h2>
+	<% end %>
 </body>
 </html>
 

@@ -1,1 +1,10 @@
-Categories
+<h2>Categories</h2>
+<% @categories.each do |category| %>
+	
+	<h4><a href="/categories/<%= category.id %>"><%= category.name %></a></h4>
+	<div id="category_pic"> <%= image_tag(category.image_link) %> 
+		<p><textarea col = 4 rows = 4 id ="my_text" disabled><%= category.description %></textarea></p>
+		<button id="clickme" name="clickme"> Read out to me </button>
+	</div>
+
+<% end %>

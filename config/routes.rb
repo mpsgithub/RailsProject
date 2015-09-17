@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/subjects/index' => 'subjects#index'
-  get '/subjects/:id' => 'subjects#show'
-  get '/categories/:id' => 'categories#show'
-  get '/sub_categories/:id' => 'sub_categories#show'
-  get '/topics/:id' => 'topics#show'
-  get '/puzzle/:id' => 'puzzle#show'
+  get '/subjects/:id' => 'categories#index'
+  get '/categories/:id' => 'subcategories#index'
+  get '/subcategories/:id' => 'topics#index'
+  # get '/topics/:id' => 'topics#show'
+  # get '/puzzle/:id' => 'puzzle#show'
 
 
   get '/sessions/new' => 'sessions#new'

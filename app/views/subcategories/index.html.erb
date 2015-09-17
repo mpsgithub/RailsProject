@@ -1,1 +1,10 @@
-Subcategories
+<h2>Sub-Categories</h2>
+<% @subcategories.each do |subcategory| %>
+	
+	<h4><a href="/subcategories/<%= subcategory.id %>"><%= subcategory.name %></a></h4>
+	<div id="category_pic"> <%= image_tag(subcategory.image_link) %> 
+		<p><textarea col = 4 rows = 4 id ="my_text" disabled><%= subcategory.description %></textarea></p>
+		<button id="clickme" name="clickme"> Read out to me </button>
+	</div>
+
+<% end %>
