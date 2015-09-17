@@ -1,8 +1,7 @@
 <h1>Topic</h1>
-<% @topics.each do |topic| %>
-	
-<%= topic.name %>
-<%= topic.description %>
+<h2><%= @topic.name %></h2>
 
 
-<% end %>
+<%= video_tag @topic.video_link, :controls => true %>
+
+

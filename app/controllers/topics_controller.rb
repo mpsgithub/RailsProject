@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
 	def index
-		@topic = Topic.all
+		@topic = Topic.first
 	end	
 end	

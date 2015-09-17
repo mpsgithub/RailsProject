@@ -1,6 +1,6 @@
-class CreateTopic < ActiveRecord::Migration
+class CreateTopics < ActiveRecord::Migration
   def change
-    create_table :topic do |t|
+    create_table :topics do |t|
       t.string :name
       t.text :description
       t.references :subcategory, index: true
