@@ -1,10 +1,18 @@
 <h2>Sub-Categories</h2>
 <% @subcategories.each do |subcategory| %>
+	<script>
+	$(document).ready(function(){
+		        $('#clickme<%= subcategory.id %>').click(function(){
+				alert('speaking'+ $('#my_text<%= subcategory.id %>').val());
+				responsiveVoice.speak($('#my_text<%= subcategory.id %>').val(), "US English Female");
+				});	
+			});
+	</script>
 	
 	<h4><a href="/subcategories/<%= subcategory.id %>"><%= subcategory.name %></a></h4>
 	<div id="category_pic"> <%= image_tag(subcategory.image_link) %> 
-		<p><textarea col = 4 rows = 4 id ="my_text" disabled><%= subcategory.description %></textarea></p>
-		<button id="clickme" name="clickme"> Read out to me </button>
+		<p><textarea col = 4 rows = 4 class = "my_text" id ="my_text<%= subcategory.id %>" disabled><%= subcategory.description %></textarea></p>
+		<button id="clickme<%= subcategory.id %>" name="clickme"> Read out to me </button>
 	</div>
 
 <% end %>
