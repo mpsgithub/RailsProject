@@ -4,9 +4,6 @@ class TopicsController < ApplicationController
 	end	
 
 	def show
-		# render "math"
-		# fail
-		@id = params[:id]
 		@topic = Topic.find(params[:id])
 	end
 end	

@@ -3,10 +3,11 @@
 	<script type="text/javascript">
 		var num;
 		var ans1, ans2, ans3, ans4;
-		var x = <%= @id %>;
+		var x = <%= @topic.operand %>;
 		var name = "<%= @name %>";
 		var tst = new RegExp("Add");
-		// var add = /Add/g;
+		// var add = /Add/g; // is also another way of writing RegExp
+		// RegEXp is an inbuilt function to check for a string availability in another string
 		var tst1 = new RegExp("Sub");
 		var tst2 = new RegExp("Mul");
 		var tst3 = new RegExp("Div");
