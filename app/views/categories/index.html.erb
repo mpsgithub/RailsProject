@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<!-- <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +12,10 @@
     <title>Heroic Features - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom CSS -->
-    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- <link href="css/heroic-features.css" rel="stylesheet"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,7 +24,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
+<!-- </head> -->
 
 <body>
 
@@ -103,9 +103,9 @@
                         <%= image_tag(category.image_link) %>    
                     <div class="caption">
                         <h3><%= category.name %></h3>
-                        <p><%= category.description %></p>
+                        <textarea class ="my_text" id="my_text<%= category.id %>"><%= category.description %></textarea>
                         <p>
-                            <a href="/categories/<%= category.id %>" class="btn btn-primary">Explore Now!</a> <a href="#" id="clickme<%= category.id %>" <span class="glyphicon glyphicon-volume-up"></span>Read it out!</a>
+                            <a href="/categories/<%= category.id %>" class="btn btn-primary">Explore Now!</a><button class="btn btn-primary" id="clickme<%= category.id %>">Read it out!</button>
 
                         </p>
                     </div>
@@ -128,12 +128,6 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
