@@ -1,0 +1,25 @@
+<h2><%= @topic.name %></h2>
+
+	<script>
+		$(document).ready(function(){
+		        $('#clickme<%= @topic.id %>').click(function(){
+				alert('speaking'+ $('#my_text<%= @topic.id %>').val());
+				responsiveVoice.speak($('#my_text<%= @topic.id %>').val(), "US English Female");
+				});	
+			});
+	</script>
+	<div id="topic-container">
+		<div id="left">
+			<p><textarea cols = 30 rows = 10 class="my_text" id="my_text<%= @topic.id  %>" disabled><%= @topic.description %></textarea></p>
+			<button id="clickme<%= @topic.id %>" name="clickme"> Read out to me </button>
+		</div>
+		<div id="right">
+			<%= video_tag @topic.video_link, :controls => true %>
+		</div>
+
+	</div>
+	 <a href="/games/<%= @topic.id %>">practise adding </a> 
+<!-- 	<form action="/games/<%= @topic.id %>" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<input type="hidden" name="number" value="<%=">
+	</form> -->

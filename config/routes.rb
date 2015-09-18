@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get '/subjects/:id' => 'categories#index'
   get '/categories/:id' => 'subcategories#index'
   get '/subcategories/:id' => 'topics#index'
-  # get '/topics/:id' => 'topics#show'
+  get '/topics/:id' => 'topics#show'
+  get '/games/:id' => 'games#index'
   # get '/puzzle/:id' => 'puzzle#show'
 
 
