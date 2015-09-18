@@ -8,6 +8,35 @@
 /*#page-content-wrapper {
      background:url('/assets/images/art-for-kids-origami-box.jpg');
 }*/
+#topic-container {
+    height: 400px;
+    width: 1000px;
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+}
+
+#left {
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    /*border: 1px solid black;*/
+    vertical-align: top;
+    
+}
+
+#right{
+    height: 400px;
+    width: 650px;
+    display: inline-block;
+    /*border: 1px solid black;*/
+    vertical-align: top;
+}
+
+#add-container{
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+}
 
 #category_pic {
     position: relative;
@@ -94,30 +123,6 @@
 }
 
 /* Sidebar Styles */
-#topic-container {
-    height: 400px;
-    width: 1000px;
-    /*border: 1px solid black;*/
-    margin: 0 auto;
-}
-
-#left {
-    height: 400px;
-    width: 300px;
-    display: inline-block;
-    /*border: 1px solid black;*/
-    vertical-align: top;
-    
-}
-
-#right{
-    height: 400px;
-    width: 650px;
-    display: inline-block;
-    /*border: 1px solid black;*/
-    vertical-align: top;
-    
-}
 
 .sidebar-nav {
     position: absolute;
