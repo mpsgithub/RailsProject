@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
 	def index
-		@categories = Category.all
+		@categories = Category.where(subject_id: params[:id])
 	end	
 end	
