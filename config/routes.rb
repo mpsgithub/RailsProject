@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
+  get '/users/about' => 'users#about'
   get '/subjects/index' => 'subjects#index'
   get '/subjects/:id' => 'categories#index'
   get '/categories/:id' => 'subcategories#index'

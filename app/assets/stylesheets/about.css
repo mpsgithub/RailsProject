@@ -1,0 +1,23 @@
+.about-container{
+	height: 250px;
+	width: 1000px;
+}
+
+.about-image{
+	height: 350px;
+	width: 300px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.about-para{
+	height: 350px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.image-size {
+	max-width: 100px;
+	max-height: 100px;
+}
