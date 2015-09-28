@@ -8,6 +8,16 @@
 /*#page-content-wrapper {
      background:url('/assets/images/art-for-kids-origami-box.jpg');
 }*/
+
+.container {
+    background: url("kids2.jpg");
+    background: no-repeat;
+}
+.subject_height {
+    min-height: 480px;
+    
+}
+
 #topic-container {
     height: 400px;
     width: 1000px;
@@ -44,6 +54,10 @@
     width: 350px;
     display: inline-block;
     vertical-align: top;
+}
+
+#subject_heading {
+    font-size: 20px;
 }
 
 #category_pic img {
@@ -183,7 +197,8 @@
 }
 
 body {
-    background: url('front-page.png');
+ /*   background: url('kidsky.jpeg');*/
+    background-color: #99CCFF;
 }
 
 @media(min-width:768px) {

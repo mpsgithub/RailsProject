@@ -1,18 +1,46 @@
-<h2>Sub-Categories</h2>
+
+
+
+      
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Sub Categories</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+
 <% @subcategories.each do |subcategory| %>
-	<script>
+   <script>
 	$(document).ready(function(){
 		        $('#clickme<%= subcategory.id %>').click(function(){
 				alert('speaking'+ $('#my_text<%= subcategory.id %>').val());
 				responsiveVoice.speak($('#my_text<%= subcategory.id %>').val(), "US English Female");
 				});	
 			});
-	</script>
-	
-	<h4><a href="/subcategories/<%= subcategory.id %>"><%= subcategory.name %></a></h4>
-	<div id="category_pic"> <%= image_tag(subcategory.image_link) %> 
-		<p><textarea col = 4 rows = 4 class = "my_text" id ="my_text<%= subcategory.id %>" disabled><%= subcategory.description %></textarea></p>
-		<button id="clickme<%= subcategory.id %>" name="clickme"> Read out to me </button>
-	</div>
+    </script>
+    
 
-<% end %>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                        <%= image_tag(subcategory.image_link) %>     
+                    <div class="caption">
+                        <h3><%= subcategory.name %></h3>
+                        <textarea class ="my_text" id ="my_text<%= subcategory.id %>"><%= subcategory.description %></textarea>
+                        <p>
+                            <a href="/subcategories/<%= subcategory.id %>" class="btn btn-primary">Explore Now!</a><button class="btn btn-primary" id="clickme<%= subcategory.id %>">Read it out!</button>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+<% end %>            
+        </div>
+        <!-- /.row -->
+
+        <hr>
+

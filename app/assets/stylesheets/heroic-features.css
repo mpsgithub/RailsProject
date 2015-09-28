@@ -10,6 +10,7 @@ body {
 
 .hero-spacer {
     margin-top: 50px;
+    background: url("kids2.jpg");
 }
 
 .hero-feature {
@@ -18,4 +19,8 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.thumbnail {
+	min-height: 520px;
 }

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/topics/:id' => 'topics#show'
   get '/games/:id' => 'games#index'
   get '/puzzles/:id' => 'puzzles#show'
-
+  get '/memorygames/:id' => "memorygames#show"
 
   get '/sessions/new' => 'sessions#new'
   get '/sessions/index' => 'sessions#index'

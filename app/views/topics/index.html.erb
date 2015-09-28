@@ -1,5 +1,45 @@
-<h1>Topics </h1>
-<% @topics.each do |t| %>
-	<a href="/topics/<%= t.id %>"><%= t.name %> </a>
 
-<% end %>
+
+      
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Topics</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+
+<% @topics.each do |t| %>
+   <script>
+	$(document).ready(function(){
+		        $('#clickme<%= t.id %>').click(function(){
+				alert('speaking'+ $('#my_text<%= t.id %>').val());
+				responsiveVoice.speak($('#my_text<%= t.id %>').val(), "US English Female");
+				});	
+			});
+    </script>
+    
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                        <%= image_tag(t.image_link) %>     
+                    <div class="caption">
+                        <h3><%= t.name %></h3>
+                        <textarea class ="my_text" id ="my_text<%= t.id %>"><%= t.description %></textarea>
+                        <p>
+                            <a href="/topics/<%= t.id %>" class="btn btn-primary">Explore Now!</a><button class="btn btn-primary" id="clickme<%= t.id %>">Read it out!</button>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+<% end %>            
+        </div>
+        <!-- /.row -->
+
+        <hr>
+

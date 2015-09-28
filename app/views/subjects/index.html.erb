@@ -1,18 +1,19 @@
+ <div class="row text-center">
+<% @subjects.each do |subject| %>
+<div class="col-md-3 col-sm-6 hero-feature ">
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Subjects</title>
-</head>
-<body>
-	<h1>Subjects</h1>
-	<% @subjects.each do |subject| %>
+                <div class="thumbnail subject_height">
+                        <%= image_tag(subject.image_link) %>    
+                    <div class="caption">
+                        <h3><%= subject.name %></h3>
+                        <p>
+                            <a href="/subjects/<%= subject.id%>" class="btn btn-primary">Explore Now!</a>
 
-	<h2><a href="/subjects/<%= subject.id%>"><%= subject.name%></a> </h2>
-	<div id="category_pic"> <%= image_tag(subject.image_link) %> 
-	</div>
-	<% end %>
-</body>
-</html>
+                        </p>
+                    </div>
+                </div>
+            </div>    
+<% end %>                
+        </div>
 
 
