@@ -5,6 +5,7 @@
  */
 
 body {
+	background-color: #32CB00;
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
@@ -19,7 +20,20 @@ footer {
    height:60px;   /* Height of the footer */
    /*background:#6cf;    /*margin: 50px 0;*/*/
 }
-#wrapper {
+.wrapper {
    min-height:100%;
    position:relative;
+
+/*  	background: url("abc1.jpg");
+	background-repeat: no-repeat;*/
+}
+
+#circle{
+	height: 200px;
+	width: 200px;
+}
+
+.baloon-1{
+	height: 200px;
+	width: 100px;
 }

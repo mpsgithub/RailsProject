@@ -3,8 +3,8 @@
 <div class="col-md-3 col-sm-6 hero-feature ">
 
                 <div class="thumbnail subject_height">
-                        <%= image_tag(subject.image_link) %>    
-                    <div class="caption">
+                        <%= image_tag(subject.image_link, :class => "image-height") %>    
+                    <div >
                         <h3><%= subject.name %></h3>
                         <p>
                             <a href="/subjects/<%= subject.id%>" class="btn btn-primary">Explore Now!</a>

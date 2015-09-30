@@ -14,8 +14,13 @@
     background: no-repeat;
 }
 .subject_height {
-    min-height: 480px;
+    min-height: 200px;
+    background-color: #32CB00;
     
+}
+.image-height{
+    height: 100px;
+    width: 150px;
 }
 
 #topic-container {
@@ -196,10 +201,10 @@
     background: none;
 }
 
-body {
- /*   background: url('kidsky.jpeg');*/
+/*body {
+    background: url('kidsky.jpeg');
     background-color: #99CCFF;
-}
+}*/
 
 @media(min-width:768px) {
     #wrapper {
